@@ -14,7 +14,7 @@ Both implements Min Heaps to sort the nodes with the shortest distances. One can
 
 Nodes on the optimal path are highlighted in different colors, from white (starter node) to black (final node), as well as the lines connecting them.
 
-Two TableView show all nodes considered by the algorithms, and proves (in terms of number of nodes considered) that A* is at least as fast as Dijkstra to reach the final node.
+Two TableView show all nodes considered by the algorithms, and proves (in terms of number of nodes considered) that A* Search (with the chosen heuristics) is always at least as fast as Dijkstra to reach the final node.
 
 
 
