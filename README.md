@@ -17,5 +17,25 @@ Nodes on the optimal path are highlighted in different colors, from white (start
 Two TableView show all nodes considered by the algorithms, and proves (in terms of number of nodes considered) that A* Search (with the chosen heuristics) is always at least as fast as Dijkstra to reach the final node.
 
 
+# Usage
+
+To import the project, add manually the files to your existing project and either initializes the classes (Node,Line, MazeHeap) through their constructors or make your view controller inherit from MazeViewController.
 
 
+```swift
+
+class MyClassViewController : MazeHeapViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let node1 = Node(name: "A", location: CGPoint(x: 150, y: 150), priority: "0")
+        let node2 = Node(name: "B", location: CGPoint(x: 20, y: 400), priority: "10000")
+        let lineView = Line(frame: self.view.frame, node1: node1, node2: node2, color: UIColor.white(), thickness: 1.5)
+        let heap = MazeHeap()
+        heap.add(node1)
+        
+        applyAStar()
+        applyDijkstra()
+    }
+}
+```
