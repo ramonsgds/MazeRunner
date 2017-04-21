@@ -86,16 +86,19 @@ class MazeRunnerHeapTests: XCTestCase {
     func testHeapifyUpComplex(){
         let node1 = Node(name: "example1", location: CGPoint(), priority: 100.0)
         let node2 = Node(name: "example2", location: CGPoint(), priority: 50.0)
-        
+        heap.add(node: node1)
+        heap.add(node: node2)
         XCTAssertEqual(heap.peek(), node2, "Root should be node 2")
         let node3 = Node(name: "example3", location: CGPoint(), priority: 20.0)
+        heap.add(node: node3)
         XCTAssertEqual(heap.peek(), node3, "Root should be node 3")
         let node4 = Node(name: "example4", location: CGPoint(), priority: 15.0)
-        XCTAssertEqual(heap.peek(), node3, "Root should be node 4")
+        heap.add(node: node4)
+        XCTAssertEqual(heap.peek(), node4, "Root should be node 4")
         let node5 = Node(name: "example5", location: CGPoint(), priority: 25.0)
+        heap.add(node: node5)
         XCTAssertEqual(heap.peek(), node4, "Root should still be node 4")
         XCTAssertEqual(heap.length(), 5, "Heap should have five nodes")
-    
     }
     
     
