@@ -45,7 +45,7 @@ class MazeRunnerHeapTests: XCTestCase {
     }
     
     func testAdditionTenElements(){
-        for index in 1...10{
+        for _ in 1...10{
             let node = Node(name: "example", location: CGPoint(), priority: 0.0)
             heap.add(node: node)
         }
@@ -53,7 +53,7 @@ class MazeRunnerHeapTests: XCTestCase {
     }
     
     func testAddition100Elements(){
-        for index in 1...100{
+        for _ in 1...100{
             let node = Node(name: "example", location: CGPoint(), priority: 0.0)
             heap.add(node: node)
         }
