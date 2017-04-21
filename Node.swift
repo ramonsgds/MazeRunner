@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Node {
+class Node : Equatable {
     private var name: String!
     private var location : CGPoint!
     private var f : Double!
@@ -39,4 +39,9 @@ class Node {
     func setPriority(f: Double){
         self.f = f
     }
+
+}
+
+func ==(lhs: Node, rhs: Node) -> Bool {
+    return lhs.getName() == rhs.getName()
 }
