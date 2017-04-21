@@ -76,6 +76,10 @@ class MazeHeap {
         return arr.count == 0
     }
     
+    func length() -> Int{
+        return arr.count
+    }
+    
     func printHeap(){
         while !isEmpty() {
             let item : Node = peek()

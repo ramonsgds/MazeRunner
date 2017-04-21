@@ -13,12 +13,11 @@ class ViewController: UIViewController {
     @IBAction func generateMap(_ sender: Any) {
         
     }
-    @IBOutlet var mapButton: UIButton!
     
+    @IBOutlet var mapButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidLayoutSubviews() {

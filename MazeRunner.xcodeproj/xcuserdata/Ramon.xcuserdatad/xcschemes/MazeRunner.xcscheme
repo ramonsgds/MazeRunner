@@ -28,6 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F63CC7011EA9EC41004F69FD"
+               BuildableName = "MazeRunnerGeneralTests.xctest"
+               BlueprintName = "MazeRunnerGeneralTests"
+               ReferencedContainer = "container:MazeRunner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F63CC70F1EAA02E8004F69FD"
+               BuildableName = "MazeRunnerMazeTests.xctest"
+               BlueprintName = "MazeRunnerMazeTests"
+               ReferencedContainer = "container:MazeRunner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F63CC71D1EAA031B004F69FD"
+               BuildableName = "MazeRunnerHeapTests.xctest"
+               BlueprintName = "MazeRunnerHeapTests"
+               ReferencedContainer = "container:MazeRunner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
