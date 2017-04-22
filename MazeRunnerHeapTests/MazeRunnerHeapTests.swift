@@ -103,13 +103,23 @@ class MazeRunnerHeapTests: XCTestCase {
     
     func testHeapifyDown(){
         let node1 = Node(name: "example1", location: CGPoint(), priority: 100.0)
-        let node2 = Node(name: "example2", location: CGPoint(), priority: 99.0)
+        let node2 = Node(name: "example2", location: CGPoint(), priority: 50.0)
+        let node3 = Node(name: "example2", location: CGPoint(), priority: 25.0)
+        let node4 = Node(name: "example2", location: CGPoint(), priority: 40.0)
         heap.add(node: node1)
         heap.add(node: node2)
-        XCTAssertEqual(heap.length(), 2, "Heap should have two nodes")
-        XCTAssertEqual(heap.peek(), node2, "Node2 should have greatest priority")
+        heap.add(node: node3)
+        heap.add(node: node4)
+        heap.pop()
+        XCTAssertEqual(heap.peek() , node4, "Node4 should have greatest priority")
+        heap.pop()
+        XCTAssertEqual(heap.peek(), node2, "Node2 should be now the root")
+        heap.pop()
+        XCTAssertEqual(heap.peek(), node1, "Node1 should be the root")
+        heap.pop()
+        XCTAssertTrue(heap.isEmpty())
     }
-    
+
     func testUpdate(){
         let node1 = Node(name: "example1", location: CGPoint(), priority: 100.0)
         let node2 = Node(name: "example2", location: CGPoint(), priority: 70.0)
@@ -121,7 +131,6 @@ class MazeRunnerHeapTests: XCTestCase {
         heap.update(node: node1)
         XCTAssertEqual(heap.peek(), node1, "Node1 now is the root")
     }
-    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
