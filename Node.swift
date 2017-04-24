@@ -39,7 +39,7 @@ class Node : Equatable {
     func setPriority(f: Double){
         self.f = f
     }
-
+    //testing 2
     //Testing
 }
 
