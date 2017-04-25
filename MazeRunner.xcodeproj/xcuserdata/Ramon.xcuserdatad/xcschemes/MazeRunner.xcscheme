@@ -58,6 +58,16 @@
                ReferencedContainer = "container:MazeRunner.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F61B44131EAE2CD70002F9DB"
+               BuildableName = "MazeRunnerUITests.xctest"
+               BlueprintName = "MazeRunnerUITests"
+               ReferencedContainer = "container:MazeRunner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

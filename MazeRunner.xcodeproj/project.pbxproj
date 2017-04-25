@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61B44171EAE2CD70002F9DB /* MazeRunnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61B44161EAE2CD70002F9DB /* MazeRunnerUITests.swift */; };
 		F63CC7051EA9EC41004F69FD /* MazeRunnerGeneralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CC7041EA9EC41004F69FD /* MazeRunnerGeneralTests.swift */; };
 		F63CC7131EAA02E9004F69FD /* MazeRunnerMazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CC7121EAA02E9004F69FD /* MazeRunnerMazeTests.swift */; };
 		F63CC7211EAA031B004F69FD /* MazeRunnerHeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CC7201EAA031B004F69FD /* MazeRunnerHeapTests.swift */; };
@@ -23,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F61B44191EAE2CD70002F9DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6B1EC7C1E586A17005A4881 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6B1EC831E586A17005A4881;
+			remoteInfo = MazeRunner;
+		};
 		F63CC7071EA9EC41004F69FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F6B1EC7C1E586A17005A4881 /* Project object */;
@@ -47,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61B44141EAE2CD70002F9DB /* MazeRunnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeRunnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61B44161EAE2CD70002F9DB /* MazeRunnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeRunnerUITests.swift; sourceTree = "<group>"; };
+		F61B44181EAE2CD70002F9DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63CC7021EA9EC41004F69FD /* MazeRunnerGeneralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeRunnerGeneralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63CC7041EA9EC41004F69FD /* MazeRunnerGeneralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeRunnerGeneralTests.swift; sourceTree = "<group>"; };
 		F63CC7061EA9EC41004F69FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F61B44111EAE2CD70002F9DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F63CC6FF1EA9EC41004F69FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61B44151EAE2CD70002F9DB /* MazeRunnerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F61B44161EAE2CD70002F9DB /* MazeRunnerUITests.swift */,
+				F61B44181EAE2CD70002F9DB /* Info.plist */,
+			);
+			path = MazeRunnerUITests;
+			sourceTree = "<group>";
+		};
 		F63CC7031EA9EC41004F69FD /* MazeRunnerGeneralTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +163,7 @@
 				F63CC7031EA9EC41004F69FD /* MazeRunnerGeneralTests */,
 				F63CC7111EAA02E9004F69FD /* MazeRunnerMazeTests */,
 				F63CC71F1EAA031B004F69FD /* MazeRunnerHeapTests */,
+				F61B44151EAE2CD70002F9DB /* MazeRunnerUITests */,
 				F6B1EC851E586A17005A4881 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +175,7 @@
 				F63CC7021EA9EC41004F69FD /* MazeRunnerGeneralTests.xctest */,
 				F63CC7101EAA02E8004F69FD /* MazeRunnerMazeTests.xctest */,
 				F63CC71E1EAA031B004F69FD /* MazeRunnerHeapTests.xctest */,
+				F61B44141EAE2CD70002F9DB /* MazeRunnerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +201,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F61B44131EAE2CD70002F9DB /* MazeRunnerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61B441D1EAE2CD70002F9DB /* Build configuration list for PBXNativeTarget "MazeRunnerUITests" */;
+			buildPhases = (
+				F61B44101EAE2CD70002F9DB /* Sources */,
+				F61B44111EAE2CD70002F9DB /* Frameworks */,
+				F61B44121EAE2CD70002F9DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F61B441A1EAE2CD70002F9DB /* PBXTargetDependency */,
+			);
+			name = MazeRunnerUITests;
+			productName = MazeRunnerUITests;
+			productReference = F61B44141EAE2CD70002F9DB /* MazeRunnerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F63CC7011EA9EC41004F69FD /* MazeRunnerGeneralTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F63CC70B1EA9EC41004F69FD /* Build configuration list for PBXNativeTarget "MazeRunnerGeneralTests" */;
@@ -253,6 +300,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ramon;
 				TargetAttributes = {
+					F61B44131EAE2CD70002F9DB = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F6B1EC831E586A17005A4881;
+					};
 					F63CC7011EA9EC41004F69FD = {
 						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Automatic;
@@ -292,11 +344,19 @@
 				F63CC7011EA9EC41004F69FD /* MazeRunnerGeneralTests */,
 				F63CC70F1EAA02E8004F69FD /* MazeRunnerMazeTests */,
 				F63CC71D1EAA031B004F69FD /* MazeRunnerHeapTests */,
+				F61B44131EAE2CD70002F9DB /* MazeRunnerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F61B44121EAE2CD70002F9DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F63CC7001EA9EC41004F69FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,6 +391,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F61B44101EAE2CD70002F9DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61B44171EAE2CD70002F9DB /* MazeRunnerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F63CC6FE1EA9EC41004F69FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +440,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F61B441A1EAE2CD70002F9DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6B1EC831E586A17005A4881 /* MazeRunner */;
+			targetProxy = F61B44191EAE2CD70002F9DB /* PBXContainerItemProxy */;
+		};
 		F63CC7081EA9EC41004F69FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6B1EC831E586A17005A4881 /* MazeRunner */;
@@ -409,6 +482,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F61B441B1EAE2CD70002F9DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MazeRunnerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramon.MazeRunnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MazeRunner;
+			};
+			name = Debug;
+		};
+		F61B441C1EAE2CD70002F9DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MazeRunnerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramon.MazeRunnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MazeRunner;
+			};
+			name = Release;
+		};
 		F63CC7091EA9EC41004F69FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -619,6 +720,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F61B441D1EAE2CD70002F9DB /* Build configuration list for PBXNativeTarget "MazeRunnerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61B441B1EAE2CD70002F9DB /* Debug */,
+				F61B441C1EAE2CD70002F9DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F63CC70B1EA9EC41004F69FD /* Build configuration list for PBXNativeTarget "MazeRunnerGeneralTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -626,6 +735,7 @@
 				F63CC70A1EA9EC41004F69FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F63CC7171EAA02E9004F69FD /* Build configuration list for PBXNativeTarget "MazeRunnerMazeTests" */ = {
 			isa = XCConfigurationList;
@@ -634,6 +744,7 @@
 				F63CC7191EAA02E9004F69FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F63CC7251EAA031B004F69FD /* Build configuration list for PBXNativeTarget "MazeRunnerHeapTests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +753,7 @@
 				F63CC7271EAA031B004F69FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6B1EC7F1E586A17005A4881 /* Build configuration list for PBXProject "MazeRunner" */ = {
 			isa = XCConfigurationList;
