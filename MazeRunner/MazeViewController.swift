@@ -187,7 +187,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     }
                 }
             }
-            if curr.getName() == finalNode!.getName() {
+            if curr == finalNode! {
                 totalDkResult.text = "\(dkUsedNodes.count)"
                 dkTableView.reloadData()
                 //Note that printResult(...) is not called here again because path is always equal (optimal) for A* and Dijkstra.
@@ -198,7 +198,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func printResult(startNode: Node, finalNode: Node){
         pathNodes.append(finalNode)
         var previous : Node = starPrev[finalNode.getName()]!
-        while (previous.getName() != startNode.getName()) {
+        while (previous != startNode) {
             pathNodes.append(previous)
             previous = starPrev[previous.getName()]!
         }
@@ -237,11 +237,11 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func createPath(){
         let node1 = nodes[Int(arc4random_uniform(UInt32(nodes.count)))]
         let node2 = nodes[Int(arc4random_uniform(UInt32(nodes.count)))]
-        if (node1.getName() != node2.getName()){                // Check if not trying to add a path from a node to itself
+        if (node1 != node2){                // Check if not trying to add a path from a node to itself
             var arr1 = pathsOnNode[node1.getName()]             // Check if there is any path on that node
             if arr1 != nil {                                    // if yes, check if trying to add a path on an existing path
                 for index in 0...((arr1?.count)! - 1){
-                    if node2.getName() == arr1?[index].getName() { //if path is duplicate, return
+                    if node2 == arr1?[index] { //if path is duplicate, return
                         return
                     }
                 }
@@ -253,7 +253,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
             var arr2 = pathsOnNode[node2.getName()]             // Do the same as above for node 2
             if arr2 != nil {
                 for index in 0...((arr2?.count)! - 1){
-                    if node1.getName() == arr2?[index].getName() {
+                    if node1 == arr2?[index] {
                         return
                     }
                 }
@@ -483,7 +483,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let startNode = self.buttonToNode[(startButton.titleLabel?.text)!]
             let roundedPriority = round(node.getPriority())
             cell?.textLabel?.text = "Node: \(node.getName()) - \(roundedPriority)"
-            if node.getName() == startNode?.getName() { // Special case for stater node, whose previous is nill.
+            if node == startNode { // Special case for stater node, whose previous is nill.
                 cell.detailTextLabel?.text = "previous: None"
             }
             else{
@@ -497,7 +497,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let startNode = self.buttonToNode[(startButton.titleLabel?.text)!]
             let roundedPriority = round(node.getPriority())
             cell?.textLabel?.text = "Node: \(node.getName()) - \(roundedPriority)"
-            if node.getName() == startNode?.getName() {
+            if node == startNode {
                 cell.detailTextLabel?.text = "previous: None" // Special case for starter node, whose previous is nill.
             }
             else{

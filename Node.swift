@@ -39,16 +39,6 @@ class Node : Equatable {
     func setPriority(f: Double){
         self.f = f
     }
-    //testing 2
-    //Testing
-    //testing 3
-    //testing 4
-    //testing 5
-    //testing 6
-    //testing 7
-    //testing 8
-    //testing 9
-    //testing10
 }
 
 func ==(lhs: Node, rhs: Node) -> Bool {
