@@ -292,7 +292,6 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
             btn.center = newLoc
         }
         
-        
         locations.append(btn.center)
         btn.setTitle(getNextLetter(), for: .normal)
         
