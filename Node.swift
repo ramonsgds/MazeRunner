@@ -45,6 +45,7 @@ class Node : Equatable {
     //testing 4
     //testing 5
     //testing 6
+    //testing 7
 }
 
 func ==(lhs: Node, rhs: Node) -> Bool {
