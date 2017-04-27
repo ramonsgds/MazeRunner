@@ -37,6 +37,11 @@
                BlueprintName = "MazeRunnerGeneralTests"
                ReferencedContainer = "container:MazeRunner.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "MazeRunnerGeneralTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">

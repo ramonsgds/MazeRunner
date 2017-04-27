@@ -33,16 +33,25 @@ class MazeRunnerUITests: XCTestCase {
         
         let app = XCUIApplication()
         app.buttons["Generate Map"].tap()
-        app.buttons["N"].tap()
-        app.buttons["Z"].tap()
-        
-        let showListNavigationBar = app.navigationBars["Show List"]
-        showListNavigationBar.buttons["Start"].tap()
-        
-        let showListButton = showListNavigationBar.buttons["Show List"]
-        showListButton.tap()
-        showListButton.tap()
+        app.buttons["H"].tap()
+        app.buttons["M"].tap()
+        app.navigationBars["Show List"].buttons["Start"]
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testTableViewCount(){
+        let app = XCUIApplication()
+        app.buttons["Generate Map"].tap()
+        XCTAssertEqual(app.tables.cells.count, 0, "Table views should be empty")
+        app.buttons["H"].tap()
+        app.buttons["M"].tap()
+        app.navigationBars["Show List"].buttons["Start"].tap()
+        app.navigationBars["Show List"].buttons["Show List"].tap()
+        XCTAssertNotEqual(app.tables.cells.count, 0, "Table views should be filled")
+    }
+    
+    func test(){
+        //testing things
     }
 }
