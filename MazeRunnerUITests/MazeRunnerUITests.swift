@@ -27,23 +27,27 @@ class MazeRunnerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        
+
+    func testTableViewAppearance(){
         let app = XCUIApplication()
         app.buttons["Generate Map"].tap()
         app.buttons["H"].tap()
         app.buttons["M"].tap()
-        app.navigationBars["Show List"].buttons["Start"]
+        XCTAssertEqual(app.tables.count, 0, "Tables should be empty")
+        XCTAssertFalse(app.tables.element(boundBy: 0).exists, "Tables should be non-existent")
+        XCTAssertFalse(app.tables.element(boundBy: 1).exists, "Tables should be non-existent")
+        app.navigationBars["Show List"].buttons["Start"].tap()
         
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        if app.alerts["Result"].exists {
+            app.alerts["Result"].buttons["Ok"].tap()
+            XCTAssertFalse(app.alerts["Result"].exists)
+        }
+        else{
+            app.navigationBars["Show List"].buttons["Show List"].tap()
+            XCTAssertTrue(app.tables.element(boundBy: 0).exists, "Dijkstra Table view should be visible")
+            XCTAssertTrue(app.tables.element(boundBy: 1).exists, "A-star Table view should be visible")
+        }
     }
-    
-    func testNewThing(){
-            //testing example
-    }
-    
     
     func testTableViewCount(){
         let app = XCUIApplication()
@@ -52,11 +56,30 @@ class MazeRunnerUITests: XCTestCase {
         app.buttons["H"].tap()
         app.buttons["M"].tap()
         app.navigationBars["Show List"].buttons["Start"].tap()
-        app.navigationBars["Show List"].buttons["Show List"].tap()
-        XCTAssertNotEqual(app.tables.cells.count, 0, "Table views should be filled")
+        if app.alerts["Result"].exists {
+            app.alerts["Result"].buttons["Ok"].tap()
+            XCTAssertFalse(app.alerts["Result"].exists)
+        }
+        else{
+            app.navigationBars["Show List"].buttons["Show List"].tap()
+            XCTAssertNotEqual(app.tables.cells.count, 0, "Table views should be filled")
+        }
     }
     
-    func test(){
-        //testing things
+    func testAStarBetterThanDijkstra(){
+        let app = XCUIApplication()
+        app.buttons["Generate Map"].tap()
+        XCTAssertEqual(app.tables.cells.count, 0, "Table views should be empty")
+        app.buttons["H"].tap()
+        app.buttons["M"].tap()
+        app.navigationBars["Show List"].buttons["Start"].tap()
+        if app.alerts["Result"].exists {
+            app.alerts["Result"].buttons["Ok"].tap()
+            XCTAssertFalse(app.alerts["Result"].exists)
+        }
+        else{
+            app.navigationBars["Show List"].buttons["Show List"].tap()
+            XCTAssertGreaterThanOrEqual(app.tables.element(boundBy: 0).cells.count, app.tables.element(boundBy: 1).cells.count, "Dijkstra table should have at least as many as A-star table view cells")
+        }
     }
 }
