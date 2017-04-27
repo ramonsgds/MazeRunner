@@ -52,7 +52,7 @@ class MazeRunnerUITests: XCTestCase {
     func testTableViewCount(){
         let app = XCUIApplication()
         app.buttons["Generate Map"].tap()
-        XCTAssertEqual(app.tables.cells.count, 0, "Table views should be empty")
+        XCTAssertEqual(app.tables.count, 0, "Table views should be empty")
         app.buttons["H"].tap()
         app.buttons["M"].tap()
         app.navigationBars["Show List"].buttons["Start"].tap()
@@ -62,7 +62,24 @@ class MazeRunnerUITests: XCTestCase {
         }
         else{
             app.navigationBars["Show List"].buttons["Show List"].tap()
-            XCTAssertNotEqual(app.tables.cells.count, 0, "Table views should be filled")
+            XCTAssertNotEqual(app.tables.count, 0, "Table views should be filled")
+        }
+    }
+    
+    func testTableViewCellsCount(){
+        let app = XCUIApplication()
+        app.buttons["Generate Map"].tap()
+        XCTAssertEqual(app.tables.cells.count, 0, "Table view cells should be empty")
+        app.buttons["H"].tap()
+        app.buttons["M"].tap()
+        app.navigationBars["Show List"].buttons["Start"].tap()
+        if app.alerts["Result"].exists {
+            app.alerts["Result"].buttons["Ok"].tap()
+            XCTAssertFalse(app.alerts["Result"].exists)
+        }
+        else{
+            app.navigationBars["Show List"].buttons["Show List"].tap()
+            XCTAssertNotEqual(app.tables.cells.count, 0, "Table view cells should be filled")
         }
     }
     
