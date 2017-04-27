@@ -40,6 +40,11 @@ class MazeRunnerUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testNewThing(){
+            //testing example
+    }
+    
+    
     func testTableViewCount(){
         let app = XCUIApplication()
         app.buttons["Generate Map"].tap()
