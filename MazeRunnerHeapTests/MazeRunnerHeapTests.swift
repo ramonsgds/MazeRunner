@@ -63,7 +63,7 @@ class MazeRunnerHeapTests: XCTestCase {
     func testPeek(){
         let node = Node(name: "example", location: CGPoint(), priority: 0.0)
         heap.add(node: node)
-        XCTAssertEqual(heap.peek().getName(), node.getName())
+        XCTAssertEqual(heap.peek(), node)
     }
     
     func testDeletion(){

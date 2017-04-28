@@ -97,7 +97,6 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return
             }
             
-            
             applyAStar()
             applyDijkstra()
         }
@@ -130,7 +129,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if starVisited[neighbor.getName()]! == false || f < neighbor.getPriority() {
                     neighbor.setPriority(f: f)
                     starPrev[neighbor.getName()] = curr
-                    if starVisited[neighbor.getName()] == false{
+                    if starVisited[neighbor.getName()] == false {
                         starVisited[neighbor.getName()] = true
                         starHeap.add(node: neighbor)
                     }
@@ -139,7 +138,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     }
                 }
             }
-            if curr.getName() == finalNode!.getName() {
+            if curr == finalNode! {
                 totalStarResult.text = "\(starUsedNodes.count)"
                 starTableView.reloadData()
                 printResult(startNode: startNode!, finalNode: finalNode!) //Show path on screen
@@ -152,7 +151,6 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
         for node in nodes {
             dkVisited[node.getName()] = false
         }
-        
         
         let startNode = self.buttonToNode[(startButton.titleLabel?.text)!]
         dkVisited[(startNode?.getName())!] = true
