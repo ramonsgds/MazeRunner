@@ -43,6 +43,8 @@ class MazeRunnerMazeTests: XCTestCase {
         XCTAssertEqual(controller.nodes.count, 26, "Node array should have 26 items")
     }
     
+    
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
