@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        build 'MazeRunner'
+        build 'MazeRunnerCD'
       }
     }
     stage('Test results') {
