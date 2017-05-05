@@ -176,6 +176,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if dkVisited[neighbor.getName()]! == false || tentativePriority < neighbor.getPriority() {
                     neighbor.setPriority(f: tentativePriority)
                     dkPrev[neighbor.getName()] = curr
+                    
                     if dkVisited[neighbor.getName()] == false{
                         dkVisited[neighbor.getName()] = true
                         dkHeap.add(node: neighbor)
