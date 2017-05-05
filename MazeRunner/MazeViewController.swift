@@ -129,6 +129,7 @@ class MazeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if starVisited[neighbor.getName()]! == false || f < neighbor.getPriority() {
                     neighbor.setPriority(f: f)
                     starPrev[neighbor.getName()] = curr
+                    
                     if starVisited[neighbor.getName()] == false {
                         starVisited[neighbor.getName()] = true
                         starHeap.add(node: neighbor)
