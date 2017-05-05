@@ -49,7 +49,6 @@ class MazeRunnerHeapTests : XCTestCase {
     func testIsEmpty(){
         XCTAssertNotNil(heap)
         XCTAssertEqual(heap.isEmpty(), true)
-        xcassertnil
     }
     
     func testAddition(){
