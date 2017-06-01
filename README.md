@@ -1,7 +1,7 @@
 # MazeRunner
 Data Structures Intermediate Project
 
-[[https://github.com/ramonsgds/MazeRunner/blob/master/Images/UITestsXCode/UIXcode1.png]]
+[[https://github.com/ramonsgds/MazeRunner/blob/master/Images/IMG_8542.PNG]]
 
 
 ## Overview
