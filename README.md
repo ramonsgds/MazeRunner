@@ -1,7 +1,7 @@
 # MazeRunner
 Data Structures Intermediate Project
 
-[[https://github.com/ramonsgds/MazeRunner/blob/master/Images/IMG_8542.PNG]]
+[[https://github.com/ramonsgds/MazeRunner/blob/master/Images/map1.png]]
 
 
 ## Overview
